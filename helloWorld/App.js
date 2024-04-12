@@ -1,40 +1,29 @@
-import { View, Text, StatusBar, StyleSheet, Button, Alert } from 'react-native'
+import { View, Button, Text, StyleSheet, StatusBar } from 'react-native'
+import { useState } from 'react'
 
 function App() {
+  const [count, setCount] = useState(0)
   return (
     <View style={styles.container}>
+      <Text>You Pressed the Button {count} times</Text>
+      <Button
+        title="Increase"
+        onPress={() => {
+          setCount(count + 1)
+        }}
+      />
       <StatusBar />
-      <Btn
-        title={'Say hello'}
-        onPress={() => {
-          Alert.alert('Hello')
-        }}
-      />
-      <Btn
-        title={'Say welcome'}
-        onPress={() => {
-          Alert.alert('Welcome')
-        }}
-      />
     </View>
   )
 }
 
 const styles = StyleSheet.create({
   container: {
-    height: 100,
-    width: 100,
-    backgroundColor: 'green',
-    justifyContent: 'center',
+    flex: 1,
     alignItems: 'center',
-  },
-  btn: {
-    backgroundColor: 'orange',
+    justifyContent: 'center',
+    gap: 10,
   },
 })
-
-function Btn({ title, onPress }) {
-  return <Button title={title} onPress={onPress} style={styles} />
-}
 
 export default App
