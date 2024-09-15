@@ -5,40 +5,29 @@ import {
   StyleSheet,
   StatusBar,
   FlatList,
+  TextInput,
+  Alert,
 } from 'react-native'
 import { useState } from 'react'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [text, setText] = useState('')
+
   return (
     <View style={styles.app}>
-      <FlatList
-        data={[
-          { key: 'red', color: 'red' },
-          { key: 'blue', color: 'blue' },
-          { key: 'green', color: 'green' },
-          { key: 'red', color: 'red' },
-          { key: 'blue', color: 'blue' },
-          { key: 'green', color: 'green' },
-          { key: 'red', color: 'red' },
-          { key: 'blue', color: 'blue' },
-          { key: 'green', color: 'green' },
-          { key: 'red', color: 'red' },
-          { key: 'blue', color: 'blue' },
-          { key: 'green', color: 'green' },
-          { key: 'red', color: 'red' },
-          { key: 'blue', color: 'blue' },
-          { key: 'green', color: 'green' },
-          { key: 'red', color: 'red' },
-          { key: 'blue', color: 'blue' },
-          { key: 'green', color: 'green' },
-          { key: 'red', color: 'red' },
-          { key: 'blue', color: 'blue' },
-          { key: 'green', color: 'green' },
-        ]}
-        renderItem={({ item }) => <Box text={item.key} color={item.color} />}
+      <Text style={styles.text}>What is your Name ?</Text>
+      <TextInput
+        style={styles.input}
+        placeholder="idriss"
+        onChangeText={setText}
+        value={text}
       />
-
+      <Button
+        title="Say Hello"
+        onPress={() => {
+          Alert.alert(`Hello ${text}`)
+        }}
+      />
       <StatusBar />
     </View>
   )
@@ -47,6 +36,16 @@ function App() {
 const styles = StyleSheet.create({
   app: {
     flex: 1,
+  },
+  text: {
+    fontSize: 30,
+  },
+  input: {
+    height: 40,
+    margin: 12,
+    borderWidth: 1,
+    padding: 10,
+    borderRadius: 10,
   },
 })
 
