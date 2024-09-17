@@ -21,11 +21,11 @@ export default function index() {
           color={'red'}
         />
         <Button
-          title="Decrease"
+          title="Reset"
           onPress={() => {
-            setSayac((e) => e - 1)
+            setSayac(0)
           }}
-          color={'red'}
+          color={'purple'}
         />
       </View>
     </View>
