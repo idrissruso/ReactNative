@@ -6,12 +6,28 @@ export default function index() {
   return (
     <View style={styles.container}>
       <Text>{sayac}</Text>
-      <Button
-        title="Increase"
-        onPress={() => {
-          setSayac((e) => e + 1)
-        }}
-      />
+      <View style={styles.buttons}>
+        <Button
+          title="Increase"
+          onPress={() => {
+            setSayac((e) => e + 1)
+          }}
+        />
+        <Button
+          title="Decrease"
+          onPress={() => {
+            setSayac((e) => e - 1)
+          }}
+          color={'red'}
+        />
+        <Button
+          title="Decrease"
+          onPress={() => {
+            setSayac((e) => e - 1)
+          }}
+          color={'red'}
+        />
+      </View>
     </View>
   )
 }
@@ -26,5 +42,11 @@ const styles = StyleSheet.create({
     marginBottom: 5,
     backgroundColor: 'red',
     padding: 10,
+  },
+  buttons: {
+    display: 'flex',
+    flexDirection: 'row',
+    gap: 10,
+    marginTop: 10,
   },
 })
