@@ -1,21 +1,11 @@
 import { Text, View, StyleSheet } from 'react-native'
+import { useState } from 'react'
 
 export default function index() {
+  const [sayac, setSayac] = useState(0)
   return (
     <View style={styles.container}>
-      <Div style={styles.division} text="My Name is idrissa"></Div>
-      <Div style={styles.division} text="I am 24 yeas old"></Div>
-      <Div style={styles.division} text="My Name is idrissa"></Div>
-      <Div style={styles.division} text="Here is my X Handle X"></Div>
-      <Div style={styles.division} text="I love react"></Div>
-    </View>
-  )
-}
-
-function Div({ text, style }: { text: string; style?: object }) {
-  return (
-    <View style={style}>
-      <Text>{text}</Text>
+      <Text>{sayac}</Text>
     </View>
   )
 }
