@@ -1,4 +1,4 @@
-import { Text, View, StyleSheet } from 'react-native'
+import { Text, View, StyleSheet, Button } from 'react-native'
 import { useState } from 'react'
 
 export default function index() {
@@ -6,6 +6,12 @@ export default function index() {
   return (
     <View style={styles.container}>
       <Text>{sayac}</Text>
+      <Button
+        title="Increase"
+        onPress={() => {
+          setSayac((e) => e + 1)
+        }}
+      />
     </View>
   )
 }
