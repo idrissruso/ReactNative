@@ -18,7 +18,7 @@ export default function index() {
           onPress={() => {
             setSayac((e) => e - 1)
           }}
-          color={'red'}
+          color={'green'}
         />
         <Button
           title="Reset"
