@@ -1,33 +1,22 @@
-import { Text, View, StyleSheet, Button } from 'react-native'
+import { Text, View, StyleSheet, Button, Image } from 'react-native'
 import { useState } from 'react'
 
 export default function index() {
   const [sayac, setSayac] = useState(0)
   return (
     <View style={styles.container}>
-      <Text>{sayac}</Text>
-      <View style={styles.buttons}>
-        <Button
-          title="Increase"
-          onPress={() => {
-            setSayac((e) => e + 1)
-          }}
-        />
-        <Button
-          title="Decrease"
-          onPress={() => {
-            setSayac((e) => e - 1)
-          }}
-          color={'green'}
-        />
-        <Button
-          title="Reset"
-          onPress={() => {
-            setSayac(0)
-          }}
-          color={'purple'}
-        />
-      </View>
+      <Image
+        src="https://avatars.githubusercontent.com/u/64365948?v=4"
+        style={styles.image}
+      />
+      <Text>Idrissa RUSONGEKA</Text>
+      <Text>Web & Mobile Full-Stack Developer</Text>
+      <Button
+        title="Learn More"
+        onPress={() => {
+          alert("I've been pressed")
+        }}
+      />
     </View>
   )
 }
@@ -37,6 +26,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    gap: 10,
   },
   division: {
     marginBottom: 5,
@@ -48,5 +38,10 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     gap: 10,
     marginTop: 10,
+  },
+  image: {
+    width: 100,
+    height: 100,
+    borderRadius: 100,
   },
 })
