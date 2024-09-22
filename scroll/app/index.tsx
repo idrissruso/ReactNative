@@ -6,7 +6,7 @@ const index = () => {
     <SafeAreaView style={styles.safeArea}>
       <ScrollView>
         <View style={styles.screen}>
-          <Text>Hi!</Text>
+          <Text style={styles.title}>Flat Cards</Text>
         </View>
       </ScrollView>
     </SafeAreaView>
@@ -16,6 +16,10 @@ const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
     backgroundColor: '#28282B',
+  },
+  title: {
+    fontSize: 40,
+    fontFamily: 'bold',
   },
   screen: {},
 })
