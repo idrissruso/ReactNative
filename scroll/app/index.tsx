@@ -16,10 +16,12 @@ const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
     backgroundColor: '#28282B',
+    padding: 10,
   },
   title: {
-    fontSize: 40,
-    fontFamily: 'bold',
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: '#dddd',
   },
   screen: {},
 })
