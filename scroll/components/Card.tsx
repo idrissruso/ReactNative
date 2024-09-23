@@ -4,11 +4,14 @@ export default function Card({ color, text }: { color: string; text: string }) {
   return (
     <View
       style={{
-        height: 120,
-        width: 120,
+        height: 115,
+        width: 115,
         backgroundColor: color,
-        marginRight: 15,
+        marginRight: 25,
         borderRadius: 2,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
       }}
     >
       <Text>ScrollViewList</Text>

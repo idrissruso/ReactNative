@@ -8,7 +8,6 @@ const ScrollViewList = () => {
       horizontal={true}
       showsHorizontalScrollIndicator={false}
       style={{ marginTop: 20 }}
-      // adding gap between cards
     >
       <Card color="red" text="Card 1" />
       <Card color="green" text="Card 2" />
