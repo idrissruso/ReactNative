@@ -1,6 +1,7 @@
 import { View, SafeAreaView, ScrollView, Text, StyleSheet } from 'react-native'
 import React from 'react'
 import ScrollViewList from '@/components/ScrollViewList'
+import ElevatedCards from '@/components/ElevetedCards'
 
 const index = () => {
   return (
@@ -11,6 +12,17 @@ const index = () => {
           <View>
             <ScrollViewList />
           </View>
+          <Text
+            style={[
+              styles.title,
+              {
+                marginTop: 20,
+              },
+            ]}
+          >
+            Elevated Cards
+          </Text>
+          <ElevatedCards />
         </View>
       </ScrollView>
     </SafeAreaView>
