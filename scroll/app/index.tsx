@@ -1,5 +1,6 @@
 import { View, SafeAreaView, ScrollView, Text, StyleSheet } from 'react-native'
 import React from 'react'
+import ScrollViewList from '@/components/ScrollViewList'
 
 const index = () => {
   return (
@@ -7,6 +8,9 @@ const index = () => {
       <ScrollView>
         <View style={styles.screen}>
           <Text style={styles.title}>Flat Cards</Text>
+          <View>
+            <ScrollViewList />
+          </View>
         </View>
       </ScrollView>
     </SafeAreaView>
