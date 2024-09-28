@@ -1,18 +1,17 @@
-import { View, Text, Button } from 'react-native'
+import { View, Text, Button, StyleSheet } from 'react-native'
 import React from 'react'
-
 import { useRouter } from 'expo-router'
 
-export default function index() {
+export default function Index() {
   const router = useRouter()
+  console.log('I am at home')
   return (
-    <View>
+    <View style={styles.container}>
       <Text>Home</Text>
       <Button
-        title="check the user"
+        title="Check the user"
         onPress={() => {
           router.push({
-            //@ts-ignore
             pathname: '/user/[id]',
             params: { id: 2 },
           })
@@ -21,3 +20,11 @@ export default function index() {
     </View>
   )
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+})
