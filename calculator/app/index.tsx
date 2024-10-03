@@ -4,7 +4,7 @@ import React from 'react'
 const index = () => {
   return (
     <View className="flex-1 bg-red-500">
-      <Text>Idrissa RUSONGEKA</Text>
+      <Text className="text-red-300">Idrissa RUSONGEKA</Text>
     </View>
   )
 }
