@@ -3,7 +3,7 @@ import React from 'react'
 
 const index = () => {
   return (
-    <View>
+    <View className="flex-1 bg-red-500">
       <Text>Idrissa RUSONGEKA</Text>
     </View>
   )
