@@ -1,14 +1,14 @@
-module.exports = function (api) {
-  api.cache(true)
-  return {
-    presets: [
-      ['babel-preset-expo', { jsxImportSource: 'nativewind' }],
-      'nativewind/babel',
-    ],
-    plugins: [
-      // Required for expo-router
-      'expo-router/babel',
-      'react-native-reanimated/plugin',
-    ],
-  }
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    './App.{js,jsx,ts,tsx}',
+    './app/**/*.{js,jsx,ts,tsx}',
+    './app/index.tsx',
+    './components/**/*.{js,jsx,ts,tsx}',
+  ],
+
+  theme: {
+    extend: {},
+  },
+  plugins: [],
 }
